@@ -2,7 +2,6 @@ import React from 'react';
 import style from './Footer.module.scss';
 import Insta from '../../assets/new/insta.png';
 import Image from 'next/image';
-import facebook from '../../assets/new/facebook.png';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -21,43 +20,34 @@ const Footer = () => {
         >
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
-              <h2>Ta Trans Inc</h2>
+              <h2>ФМО-И-15-19</h2>
             </div>
-            <p>No road is long with good company</p>
+            <p>Группа информатиков</p>
           </div>
           <div className={style.blockFooter}>
-            <h3>Pages</h3>
-            <a href='/#about'>About</a>
-            <a href='/#services'>Services</a>
-            <a href='/#contacts'>Contacts</a>
-            <a href='/#solutions'>Solutions</a>
+            <h3>Страницы</h3>
+            <a href='/'>Главная</a>
+            <a href='/group'>Группа</a>
+            <a href='/timetable'>Расписание</a>
+            <a href='/teacher'>Учителя</a>
           </div>
           <div className={style.blockFooter}>
-            <h3>Contacts</h3>
-            <a href='mailto:hiring@tatransinc.com'>hiring@tatransinc.com</a>
-            <a href='tel:773-435-9283'>773-435-9283</a>
-            <p>
-              701 Lee St Suite 460, <br /> Des Plaines, IL 60016
-            </p>
+            <h3>Контакты</h3>
+            <a href='mailto:fmo.i15.19@mail.ru'>fmo.i15.19@mail.ru</a>
+            <a href='tel:+996704135830'>+996704135830</a>
             <div className={style.socialMedia}>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
-                href='https://instagram.com/tatransinc?utm_medium=copy_link'
+                href='https://www.instagram.com/fmo_i1519/'
+                style={{display: 'flex'}}
               >
                 <Image src={Insta} width={50} height={50} />
-              </a>
-              <a
-                style={{ marginTop: '3px' }}
-                href='https://www.facebook.com/TA-Trans-Inc-100493832503315/'
-              >
-                <Image src={facebook} width={40} height={40} />
+                instagram
               </a>
             </div>
           </div>
         </motion.div>
-        <div className={style.footerHr} />
-        <div className={style.footerText}></div>
       </div>
     </footer>
   );

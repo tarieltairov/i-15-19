@@ -4,12 +4,6 @@ import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import { useMediaQuery } from "react-responsive";
-import Image from "next/image";
-import LinkedinIcon from "../../../assets/svg/Icon-Linkedin.svg";
-import BehanceIcon from "../../../assets/svg/Icon-behance.svg";
-import ClutchIcon from "../../../assets/svg/Icon-Clutch.svg";
-import Insta from "../../../assets/new/insta.png"
-import UpWorkIcon from "../../../assets/svg/Icon-Upwork.svg";
 const footerVariants = {
   open: {
     y: 0,
@@ -84,45 +78,6 @@ export const MainMenu = () => {
       <div className="pointerBlocker">
         <motion.div className="background" variants={sidebar} />
         <Navigation toggle={() => toggleOpen()} />
-        <motion.div className="mainMenuFooterWrapper" variants={footerVariants}>
-          <div className="socials">
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="https://www.instagram.com/"
-            >
-              <Image src={Insta} width={50} height={50} className="insta" />
-            </a>
-
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="/"
-              style={{ textDecoration: "none", color: "white", marginTop: "5px" }}
-            >
-              <h3>Ta Trans Inc</h3>
-            </a>
-          </div>
-
-          <div style={style}>
-            <a
-              rel="noreferrer noopener"
-              target="_blank"
-              href="#"
-              style={{ color: 'white' }}
-            >
-              hello@example.io
-            </a>
-            <a
-              style={{ color: 'white' }}
-              rel="noreferrer noopener"
-              target="_blank"
-              href="https://www.google.com/maps/place/Bishkek"
-            >
-              Central Asia
-            </a>
-          </div>
-        </motion.div>
       </div>
     </motion.nav>
   );

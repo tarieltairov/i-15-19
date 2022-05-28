@@ -168,28 +168,34 @@
       padding: 0 10px;
     }
     h1{
-      color: white;
       font-size: 80px;
       font-weight: 600 ;
+      margin-top: 400px;
       margin-bottom: 20px;
+      color: orange;
       text-align: center;
       @media (max-width: 768px){
         font-size: 50px;
+        margin-top: 20px;
       }
       @media(max-width: 600px){
         font-size: 30px;
+        margin: 0;
       }
       @media(max-width: 375px){
         font-size: 22px;
+        margin: 0;
         margin-bottom: 15px;
       }
       @media(max-width: 320px){
         font-size: 20px;
+        margin: 0;
       }
     }
     p{
-      color: white;
-      font-size: 25px;
+      color: orange;
+      font-size: 40px;
+      font-weight: bold;
       margin-bottom: 20px;
       text-align: center;
       @media (max-width: 600px){

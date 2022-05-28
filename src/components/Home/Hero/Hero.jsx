@@ -1,54 +1,40 @@
 import { Carousel } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./Hero.module.scss";
-import Link from "next/link"
 import Image from "next/image";
-import ft from "../../../assets/new/ft.jpg"
-import ft2 from "../../../assets/new/ft2.jpg"
-import truck1 from "../../../assets/new/truck1.jpg"
-import axios from "axios";
+import q from '../../../assets/1.jpg';
+import w from '../../../assets/2.jpg';
+import e from '../../../assets/3.jpg';
+import r from '../../../assets/4.jpg';
+import t from '../../../assets/5.jpg';
 
-const Hero = ({ ref }) => {
+const Hero = () => {
   const [index, setIndex] = useState(0);
-  const [text, setText] = useState("")
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-  useEffect(() => {
-    getText()
-  }, [])
-  async function getText() {
-    try {
-      let res = await axios.get("https://kanatik6.pythonanywhere.com/message/home_page/")
-      setText(res.data[0])
-    } catch (e) {
-      console.log(e)
-    }
-  }
-  return (
 
+  return (
     <div className={style.hh}>
       <div className={style.toto}>
-        <h1>{text?.title}</h1>
-        <p>{text?.descriptions}</p>
-        <Link href="/#contacts">
-          <button >
-            Apply now
-          </button>
-        </Link>
-
+        <h1>ИНФОРМАТИКИ</h1>
+        <p>Ваша любимая группа!</p>
       </div>
       <Carousel activeIndex={index} onSelect={handleSelect} className={style.slider}>
         <Carousel.Item className={style.lol}>
-          <Image src={truck1} className={style.img} />
-          <Carousel.Caption>
-          </Carousel.Caption>
+          <Image src={q} className={style.img} />
         </Carousel.Item>
         <Carousel.Item className={style.lol}>
-          <Image src={ft} className={style.img} />
+          <Image src={w} className={style.img} width={4000} height={3000}/>
         </Carousel.Item>
         <Carousel.Item className={style.lol}>
-          <Image src={ft2} className={style.img} />
+          <Image src={e} className={style.img} />
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={r} className={style.img} height={1150}/>
+        </Carousel.Item>
+        <Carousel.Item className={style.lol}>
+          <Image src={t} className={style.img} height={3000}/>
         </Carousel.Item>
       </Carousel>
     </div>

@@ -51,27 +51,22 @@ export const Navigation = ({ toggle }) => (
 const menuItems = [
   {
     id: "mainMenuItem-1",
-    title: "HOME",
+    title: "Главная",
     link: "/",
   },
   {
     id: "mainMenuItem-2",
-    title: "SERVICES",
-    link: "/#services",
+    title: "Группа",
+    link: "/group",
   },
   {
     id: "mainMenuItem-3",
-    title: "CONTACTS",
-    link: "/#contacts",
+    title: "Расписание",
+    link: "/timetable",
   },
-  // {
-  //   id: "mainMenuItem-5",
-  //   title: "SOLUTIONS",
-  //   link: "/#solutions",
-  // },
   {
     id: "mainMenuItem-6",
-    title: "ABOUT US",
-    link: "/#about",
+    title: "Учителя",
+    link: "/teacher",
   },
 ];

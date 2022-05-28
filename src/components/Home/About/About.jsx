@@ -4,12 +4,47 @@ import BoltIcon from '../../../assets/svg/Icon-bolt.svg';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import ContentHeadTitle from '../../components/ContentHeadTitlte/ContentHeadTitle';
-import truck1 from '../../../assets/new/truck1.jpg';
-import truck2 from '../../../assets/new/truck2.jpg';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import Aliya from '../../../assets/students/aliya.jpeg';
+import jora from '../../../assets/students/jora.jpeg'
+import tari from '../../../assets/students/tari.jpeg'
+import q from '../../../assets/1.jpg'
+import e from '../../../assets/3.jpg';
+const group = [
+  {
+    id: 1, name: 'Алия Исамудинова', url: Aliya
+  },
+  {
+    id: 2, name: 'Жакешова Алтынай', url: Aliya
+  },
+  {
+    id: 3, name: 'Икрам к Турсунай', url: Aliya
+  },
+  {
+    id: 4, name: 'Эркалиева Айнура', url: Aliya
+  },
+  {
+    id: 5, name: 'Айбек к Кундузай', url: Aliya
+  },
+  {
+    id: 6, name: 'Кенешова Даражан', url: Aliya
+  },
+  {
+    id: 7, name: 'Мендибай к Жора', url: jora
+  },
+  {
+    id: 8, name: 'Тургунбаева Айзирек', url: Aliya
+  },
+  {
+    id: 9, name: 'Омошева Айзада', url: Aliya
+  },
+  {
+    id: 9, name: 'Таиров Тариэл', url: tari
+  },
+]
 
 const About = () => {
   const [open, setOpen] = useState(false);
@@ -41,36 +76,24 @@ const About = () => {
     }
   }, [open]);
 
-  const animate = open
-    ? {
-        position: 'fixed',
-        width: isMobile ? '95%' : '80vw',
-        height: '70vh',
-        clipPath: 'none',
-        padding: '40px 5px',
-      }
-    : {
-        position: 'absolute',
-        height: `${isMobile ? '348px' : isLaptop ? '552px' : '512px'}`,
-        width: `${isMobile ? '320px' : isLaptop ? '508px' : '470px'}`,
-        clipPath: 'polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%)',
-      };
-
   const animateShadow = open
     ? {
-        position: 'fixed',
-        width: '100vw',
-        height: '100vh',
-        borderRadius: '0%',
-        background: 'rgba(0, 0, 0, 0.5)',
-        zIndex: 13,
-      }
+      position: 'fixed',
+      width: '100vw',
+      height: '100vh',
+      borderRadius: '0%',
+      background: 'rgba(0, 0, 0, 0.5)',
+      zIndex: 13,
+    }
     : {
-        width: '10px',
-        height: '10px',
-        borderRadius: '50%',
-        background: 'transparent',
-      };
+      width: '10px',
+      height: '10px',
+      borderRadius: '50%',
+      background: 'transparent',
+    };
+
+
+
 
   return (
     <div className={style.main}>
@@ -87,7 +110,7 @@ const About = () => {
               }}
               className={style.heading}
             >
-              <ContentHeadTitle title={'ABOUT US'} />
+              <ContentHeadTitle title={'Группа'} centered/>
             </motion.div>
             <div className={style.content}>
               <motion.h4
@@ -99,7 +122,7 @@ const About = () => {
                   hidden: { opacity: 0, scale: 0 },
                 }}
               >
-                {text.title}
+                Кыргызский Государственный Университет им. Ишеналы Арабаева
               </motion.h4>
               <motion.div
                 className={style.contentBlock}
@@ -112,7 +135,7 @@ const About = () => {
                 }}
               >
                 <Image src={BoltIcon} />
-                <p>{text.descriptions}</p>
+                <p>Факультет физико-математического образования и информационных технологий</p>
               </motion.div>
               <motion.div
                 className={style.contentBlock}
@@ -125,23 +148,10 @@ const About = () => {
                 }}
               >
                 <Image src={BoltIcon} />
-                <p>{text.descriptions2}</p>
+                <p>Профиль - Информатика.  Код группы - ФМО-И-15-19</p>
               </motion.div>
             </div>
-            <motion.div
-              initial='hidden'
-              whileInView='visible'
-              transition={{ duration: 0.5 }}
-              variants={{
-                visible: { scale: 1 },
-                hidden: { scale: 0 },
-              }}
-              className={style.buttons}
-            >
-              <a href='/#contacts'>
-                <button>Apply now</button>
-              </a>
-            </motion.div>
+
           </div>
 
           <div animate={animateShadow} className={style.shadow} />
@@ -160,14 +170,37 @@ const About = () => {
               className={style.slider}
             >
               <Carousel.Item>
-                <Image src={truck1} width={900} height={600} />
+                <Image src={q} width={900} height={650} />
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={truck2} width={900} height={600} />
+                <Image src={e} width={900} height={650} />
               </Carousel.Item>
             </Carousel>
           </motion.div>
         </div>
+        <motion.div
+
+          className={style.group}
+        >
+          {group.map(student => (
+            <motion.div
+              initial='hidden'
+              whileInView='visible'
+              transition={{ duration: 0.5 }}
+              variants={{
+                visible: { scale: 1 },
+                hidden: { scale: 0 },
+              }}
+              key={student.id}
+              className={style.student_block}
+            >
+              <Image src={student.url} height={1000} width={500} />
+
+              <h4>{student.name}</h4>
+            </motion.div>
+          ))}
+
+        </motion.div>
       </div>
     </div>
   );

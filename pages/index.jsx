@@ -10,15 +10,9 @@ import Analytics from '../src/components/Home/Analytics/Analytics';
 
 function Home() {
   return (
-    <MainLayout>
-      <Hero />
-      <About />
-      <Services />
-      <Solutions />
-      <Analytics />
-      <Slider />
-      <PreFooter />
-    </MainLayout>
+      <MainLayout>
+        <Hero />
+      </MainLayout>
   );
 }
 
