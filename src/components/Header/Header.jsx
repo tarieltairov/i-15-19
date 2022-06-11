@@ -10,7 +10,7 @@ const Header = ({ inView }) => {
       <div className={style.header}>
         <div className={style.logo}>
           <Link href="/">
-            <h2>ФМО-И-15-19</h2>
+            <h2>ФМО-И-15-18</h2>
           </Link>
         </div>
         <div className={style.links}>

@@ -37,7 +37,7 @@ function Expertise() {
           hidden: { opacity: 0, scale: 0 },
         }}
         className={classes.heading}>
-        <ContentHeadTitle title='Расписание группы' centered />
+        <ContentHeadTitle title='Расписание группы на 2020-2021 гг' centered />
       </motion.div>
       <motion.h4
         initial='hidden'

@@ -8,41 +8,89 @@ import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import Aliya from '../../../assets/students/aliya.jpeg';
-import jora from '../../../assets/students/jora.jpeg'
-import tari from '../../../assets/students/tari.jpeg'
-import q from '../../../assets/1.jpg'
-import e from '../../../assets/3.jpg';
+import q from '../../../assets/18/7.jpeg'
+import e from '../../../assets/18/2.jpeg'
+
+import ko from '../../../assets/18/student/1.jpeg';
+import w from '../../../assets/18/student/2.jpeg';
+import n from '../../../assets/18/student/3.jpeg';
+import r from '../../../assets/18/student/4.jpeg';
+import t from '../../../assets/18/student/5.jpeg';
+import y from '../../../assets/18/student/6.jpeg';
+import u from '../../../assets/18/student/7.jpeg';
+import i from '../../../assets/18/student/8.jpeg';
+import o from '../../../assets/18/student/9.jpeg';
+import p from '../../../assets/18/student/10.jpeg';
+import a from '../../../assets/18/student/11.jpeg';
+import s from '../../../assets/18/student/12.jpeg';
+import d from '../../../assets/18/student/13.jpeg';
+import f from '../../../assets/18/student/14.jpeg';
+import g from '../../../assets/18/student/15.jpeg';
+import h from '../../../assets/18/student/16.jpeg';
+import j from '../../../assets/18/student/17.jpeg';
+import k from '../../../assets/18/student/18.jpeg';
+import l from '../../../assets/18/student/19.jpeg';
+
+import tariel from '../../../assets/students/tari.jpeg';
+
+
 const group = [
   {
-    id: 1, name: 'Алия Исамудинова', url: Aliya
+    id: 1, name: 'Алина Назарбекова', url: ko
   },
   {
-    id: 2, name: 'Жакешова Алтынай', url: Aliya
+    id: 2, name: 'Жылдызбек кызы Нургул', url: w
   },
   {
-    id: 3, name: 'Икрам к Турсунай', url: Aliya
+    id: 3, name: 'Кенешбекова Айжамал', url: n
   },
   {
-    id: 4, name: 'Эркалиева Айнура', url: Aliya
+    id: 4, name: 'Эмилова Альбина ', url: r
   },
   {
-    id: 5, name: 'Айбек к Кундузай', url: Aliya
+    id: 5, name: 'Жыргалбек кызы Дариха', url: t
   },
   {
-    id: 6, name: 'Кенешова Даражан', url: Aliya
+    id: 6, name: 'Назарбекова Бурул', url: y
   },
   {
-    id: 7, name: 'Мендибай к Жора', url: jora
+    id: 7, name: 'Мыктыбек кызы Айгерим', url: u
   },
   {
-    id: 8, name: 'Тургунбаева Айзирек', url: Aliya
+    id: 8, name: 'Доолотбаев Бектур', url: tariel
   },
   {
-    id: 9, name: 'Омошева Айзада', url: Aliya
+    id: 9, name: 'Автандил кызы Айнура', url: o
   },
   {
-    id: 9, name: 'Таиров Тариэл', url: tari
+    id: 10, name: 'Абдыкалил у Адилет', url: p
+  },
+  {
+    id: 11, name: 'Бакыт уулу Расул', url: a
+  },
+  {
+    id: 12, name: 'Султанбекова Айгерим', url: s
+  },
+  {
+    id: 13, name: 'Собитов Донишжон', url: d
+  },
+  {
+    id: 14, name: 'Нурбек к Айдай ', url: f
+  },
+  {
+    id: 15, name: 'Ыдырыс кызы Бурмачач', url: g
+  },
+  {
+    id: 16, name: 'Бекмуратова Уулжан', url: h
+  },
+  {
+    id: 17, name: 'Жолчубек кызы Арчагул', url: j
+  },
+  {
+    id: 18, name: 'Абышова Керез', url: k
+  },
+  {
+    id: 19, name: 'Орозбекова Жумаян', url: l
   },
 ]
 
@@ -148,7 +196,7 @@ const About = () => {
                 }}
               >
                 <Image src={BoltIcon} />
-                <p>Профиль - Информатика.  Код группы - ФМО-И-15-19</p>
+                <p>Профиль - Информатика.  Код группы - ФМО-И-15-18</p>
               </motion.div>
             </div>
 
@@ -194,7 +242,7 @@ const About = () => {
               key={student.id}
               className={style.student_block}
             >
-              <Image src={student.url} height={1000} width={500} />
+              <Image src={student.url} height={7000}/>
 
               <h4>{student.name}</h4>
             </motion.div>

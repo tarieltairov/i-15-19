@@ -20,7 +20,7 @@ const Footer = () => {
         >
           <div className={style.blockFooter}>
             <div className={style.logoBlock}>
-              <h2>ФМО-И-15-19</h2>
+              <h2>ФМО-И-15-18</h2>
             </div>
             <p>Группа информатиков</p>
           </div>
@@ -33,13 +33,12 @@ const Footer = () => {
           </div>
           <div className={style.blockFooter}>
             <h3>Контакты</h3>
-            <a href='mailto:fmo.i15.19@mail.ru'>fmo.i15.19@mail.ru</a>
-            <a href='tel:+996704135830'>+996704135830</a>
+            <a href='mailto:fmoi1518@mail.ru'>fmoi1518@mail.ru</a>
             <div className={style.socialMedia}>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
-                href='https://www.instagram.com/fmo_i1519/'
+                href='https://www.instagram.com/skrrrrrra_group/?igshid=YmMyMTA2M2Y%3D'
                 style={{display: 'flex'}}
               >
                 <Image src={Insta} width={50} height={50} />
