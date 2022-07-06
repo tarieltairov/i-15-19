@@ -30,7 +30,7 @@ import h from '../../../assets/18/student/16.jpeg';
 import j from '../../../assets/18/student/17.jpeg';
 import k from '../../../assets/18/student/18.jpeg';
 import l from '../../../assets/18/student/19.jpeg';
-
+import beka from '../../../assets/45/444.jpeg'
 import tariel from '../../../assets/students/tari.jpeg';
 
 
@@ -57,7 +57,7 @@ const group = [
     id: 7, name: 'Мыктыбек кызы Айгерим', url: u
   },
   {
-    id: 8, name: 'Доолотбаев Бектур', url: tariel
+    id: 8, name: 'Доолотбаев Бектур', url: beka
   },
   {
     id: 9, name: 'Автандил кызы Айнура', url: o
